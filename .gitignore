@@ -1,0 +1,6 @@
+# Windows / editor clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+.vscode/

@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brandwise Business Solutions | Where Innovation Meets Delivery</title>
+<link rel="icon" type="image/png" href="assets/bbs-icon.png">
+<meta name="theme-color" content="#1e0b4b">
+<meta name="description" content="BrandWise Business Solutions Limited is a Zambian-owned company in Lusaka offering branding, marketing, social media management, web design, writing services and general supply.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12062e;
+  --ink-2:#1e0b4b;
+  --ink-3:#2a1263;
+  --line:rgba(255,255,255,.09);
+  --text:#f4eefc;
+  --muted:#b9a9d9;
+  --brand:#d311bf;
+  --brand-2:#ff6fd8;
+  --accent:#ffb547;
+  --paper:#fbf6fd;
+  --paper-ink:#1e0b4b;
+  --radius:22px;
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--ink);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.grad{background:linear-gradient(100deg,var(--brand) 0%,var(--brand-2) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-2)}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:.98rem;transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer;border:0;font-family:inherit}
+.btn-primary{background:linear-gradient(100deg,var(--brand),#e83fd0);color:#fff;box-shadow:0 10px 30px -10px rgba(211,17,191,.8)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px -12px rgba(211,17,191,.9)}
+.btn-ghost{background:rgba(255,255,255,.06);color:var(--text);border:1px solid var(--line)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn svg{width:18px;height:18px}
+
+/* NAV */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(18,6,46,.82);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Montserrat;font-weight:800;font-size:1.2rem;letter-spacing:-.02em}
+.logo-img{height:36px;width:auto}
+.logo small{display:block;font-family:Inter;font-weight:500;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.nav-links{display:flex;gap:32px;list-style:none;font-size:.95rem;color:var(--muted)}
+.nav-links a{transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{display:flex;gap:12px;align-items:center}
+.menu-btn{display:none;background:none;border:0;color:#fff;width:44px;height:44px;cursor:pointer}
+.menu-btn svg{width:26px;height:26px}
+
+/* HERO */
+.hero{position:relative;padding:170px 0 110px;overflow:hidden}
+.hero::before{content:"";position:absolute;width:780px;height:780px;right:-220px;top:-260px;background:radial-gradient(circle,rgba(211,17,191,.45),transparent 62%);z-index:-1;animation:float 14s ease-in-out infinite}
+.hero::after{content:"";position:absolute;width:620px;height:620px;left:-260px;bottom:-280px;background:radial-gradient(circle,rgba(255,111,216,.22),transparent 62%);z-index:-1;animation:float 18s ease-in-out infinite reverse}
+.grid-bg{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 50% 30%,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000 20%,transparent 70%);opacity:.6}
+@keyframes float{50%{transform:translate(-40px,40px) scale(1.06)}}
+.hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 8px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-size:.85rem;color:var(--muted);margin-bottom:26px}
+.pill b{background:var(--brand);color:#fff;padding:3px 10px;border-radius:999px;font-size:.72rem;letter-spacing:.06em}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.4rem);font-weight:800;margin-bottom:24px}
+.hero p.lead{font-size:1.12rem;color:var(--muted);max-width:560px;margin-bottom:36px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 22px;color:var(--muted);font-size:.9rem}
+.facts span{display:inline-flex;align-items:center;gap:8px}
+.facts svg{width:16px;height:16px;color:var(--brand-2)}
+
+/* hero visual */
+.hero-card{position:relative;aspect-ratio:1/1.05;max-width:460px;justify-self:end;width:100%}
+.hc-main{position:absolute;inset:0;border-radius:28px;background:linear-gradient(160deg,var(--ink-3),var(--ink-2));border:1px solid var(--line);padding:28px;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);overflow:hidden;display:flex;flex-direction:column}
+.hc-main h4{font-size:.85rem;color:var(--muted);font-weight:600;font-family:Inter;margin-bottom:6px}
+.hc-big{font-family:Montserrat;font-size:2.1rem;font-weight:800;line-height:1.15}
+.hc-big small{display:block;font-size:.95rem;color:var(--brand-2);font-weight:600;margin-top:6px}
+.bars{display:flex;align-items:flex-end;gap:10px;flex:1;min-height:120px;margin-top:24px}
+.bars i{flex:1;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,var(--brand),rgba(211,17,191,.2));transform-origin:bottom;animation:grow 1.2s cubic-bezier(.2,.8,.2,1) both}
+.bars i:nth-child(even){background:linear-gradient(180deg,var(--brand-2),rgba(255,111,216,.15))}
+@keyframes grow{from{transform:scaleY(0)}}
+.palette{display:flex;gap:8px;margin-top:22px}
+.palette span{flex:1;height:40px;border-radius:12px}
+.float-chip{position:absolute;background:rgba(30,11,75,.94);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:flex;gap:12px;align-items:center;font-size:.85rem;box-shadow:0 20px 40px -18px rgba(0,0,0,.8);animation:bob 6s ease-in-out infinite}
+.float-chip .ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center}
+.float-chip strong{display:block;font-family:Montserrat;font-size:.95rem}
+.float-chip span.s{color:var(--muted);font-size:.78rem}
+.chip-1{left:-48px;top:40%}
+.chip-2{right:-28px;bottom:8%;animation-delay:-3s}
+@keyframes bob{50%{transform:translateY(-12px)}}
+
+/* MARQUEE */
+.marquee{border-block:1px solid var(--line);padding:26px 0;overflow:hidden;position:relative}
+.marquee p{text-align:center;color:var(--muted);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+.track{display:flex;gap:60px;width:max-content;animation:scroll 36s linear infinite}
+.track span{font-family:Montserrat;font-weight:700;font-size:1.25rem;color:rgba(255,255,255,.32);white-space:nowrap}
+.track span::after{content:"✦";margin-left:60px;color:rgba(211,17,191,.6);font-size:.9rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.marquee::before,.marquee::after{content:"";position:absolute;top:0;bottom:0;width:120px;z-index:2}
+.marquee::before{left:0;background:linear-gradient(90deg,var(--ink),transparent)}
+.marquee::after{right:0;background:linear-gradient(-90deg,var(--ink),transparent)}
+
+/* SECTIONS */
+section{padding:110px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;max-width:660px;margin-top:14px}
+.sec-head p{color:var(--muted);max-width:420px}
+
+/* SERVICES bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{position:relative;background:linear-gradient(170deg,var(--ink-2),rgba(30,11,75,.4));border:1px solid var(--line);border-radius:var(--radius);padding:32px;overflow:hidden;transition:transform .35s,border-color .35s}
+.card:hover{transform:translateY(-6px);border-color:rgba(211,17,191,.55)}
+.card::after{content:"";position:absolute;inset:auto -40% -60% auto;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(211,17,191,.25),transparent 65%);opacity:0;transition:opacity .4s}
+.card:hover::after{opacity:1}
+.card .ic{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;margin-bottom:24px}
+.card .ic svg{width:26px;height:26px}
+.card h3{font-size:1.3rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.96rem}
+.card ul{list-style:none;margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.card li{font-size:.78rem;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--text)}
+.c-span-3{grid-column:span 3}.c-span-2{grid-column:span 2}.c-span-4{grid-column:span 4}.c-span-6{grid-column:span 6}
+.card.feature{background:linear-gradient(135deg,#d311bf,#8e0f9e 50%,#1e0b4b);border:0}
+.card.feature p{color:rgba(255,255,255,.85)}
+.card.feature li{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.2)}
+.card.supply{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;align-items:center}
+.ic-a{background:rgba(211,17,191,.18);color:#f07ee3}
+.ic-b{background:rgba(255,111,216,.14);color:var(--brand-2)}
+.ic-c{background:rgba(255,181,71,.14);color:var(--accent)}
+.ic-d{background:rgba(160,120,255,.16);color:#c3a8ff}
+.ic-w{background:rgba(255,255,255,.18);color:#fff}
+
+/* WHY */
+.why{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:20px}
+.why div{padding:24px 22px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.02)}
+.why b{display:block;font-family:Montserrat;font-size:1rem;margin:12px 0 6px}
+.why span{color:var(--muted);font-size:.88rem}
+.why i{font-style:normal;color:var(--brand-2);font-size:1.2rem}
+
+/* ABOUT / LIGHT SECTION */
+.light{background:var(--paper);color:var(--paper-ink);border-radius:40px;margin:0 16px}
+.light .eyebrow{color:var(--brand)}
+.light .muted{color:#5d5378}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-visual{position:relative;border-radius:30px;aspect-ratio:4/4.4;background:linear-gradient(150deg,#1e0b4b,#d311bf);overflow:hidden;padding:34px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff}
+.about-visual .ring{position:absolute;border-radius:50%;border:2px solid rgba(255,255,255,.25)}
+.about-visual .r1{width:420px;height:420px;top:-120px;right:-140px}
+.about-visual .r2{width:260px;height:260px;top:-40px;right:-60px;border-style:dashed}
+.about-visual .about-logo{position:absolute;top:34px;left:34px;width:62%;max-width:300px;filter:drop-shadow(0 18px 30px rgba(0,0,0,.35))}
+.about-visual small{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;opacity:.8}
+.about-visual blockquote{font-family:Montserrat;font-size:1.35rem;font-weight:600;line-height:1.35;position:relative;margin-top:8px}
+.about-text h2{font-size:clamp(2rem,4vw,2.8rem);margin:14px 0 22px}
+.about-text p{margin-bottom:16px;font-size:1.02rem}
+.mission{margin:22px 0 6px;padding:18px 20px;border-left:3px solid var(--brand);background:#fff;border-radius:0 16px 16px 0;box-shadow:0 10px 30px -22px rgba(30,11,75,.4)}
+.mission b{font-family:Montserrat;color:var(--brand);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+.mission p{margin:6px 0 0;font-size:.95rem;color:#3d3358}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.value{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:18px;padding:16px;box-shadow:0 10px 30px -20px rgba(30,11,75,.35)}
+.value .dot{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:#fbe3f8;color:var(--brand)}
+.value .dot svg{width:18px;height:18px}
+.value h4{font-size:.95rem;margin-bottom:3px}
+.value p{font-size:.83rem;margin:0;color:#5d5378;line-height:1.45}
+
+/* PORTFOLIO */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.chip{font:inherit;font-size:.88rem;font-weight:600;padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);cursor:pointer;transition:all .2s}
+.chip:hover{color:#fff;border-color:rgba(211,17,191,.5)}
+.chip.active{background:var(--brand);border-color:var(--brand);color:#fff}
+.chip small{opacity:.7;margin-left:4px;font-weight:500}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.shot{position:relative;aspect-ratio:1/1;border-radius:18px;overflow:hidden;background:var(--ink-2);border:1px solid var(--line);cursor:zoom-in;padding:0;transition:transform .35s,box-shadow .35s}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
+.shot:hover{transform:translateY(-4px);box-shadow:0 24px 40px -24px rgba(211,17,191,.7)}
+.shot:hover img{transform:scale(1.05)}
+.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;background:linear-gradient(transparent,rgba(18,6,46,.92));font-size:.8rem;font-weight:600;color:#fff;opacity:0;transform:translateY(8px);transition:all .3s;text-align:left}
+.shot:hover figcaption,.shot:focus-visible figcaption{opacity:1;transform:none}
+.shot.hide{display:none}
+.sub-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin:90px 0 30px}
+.sub-head h3{font-size:clamp(1.6rem,3vw,2.2rem);margin-top:12px}
+.sub-head p{color:var(--muted);max-width:420px;font-size:.95rem}
+.profiles{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.doc{all:unset;cursor:zoom-in;display:block}
+.doc .cover{position:relative;aspect-ratio:1/1.414;border-radius:6px 14px 14px 6px;overflow:hidden;background:#fff;box-shadow:0 30px 50px -28px rgba(0,0,0,.9),-6px 0 0 -2px rgba(255,255,255,.08);transition:transform .4s,box-shadow .4s}
+.doc .cover::before{content:"";position:absolute;inset:0 auto 0 0;width:10px;background:linear-gradient(90deg,rgba(0,0,0,.25),transparent);z-index:1}
+.doc .cover img{width:100%;height:100%;object-fit:cover;object-position:top}
+.doc:hover .cover,.doc:focus-visible .cover{transform:translateY(-8px) rotate(-1deg);box-shadow:0 40px 60px -28px rgba(211,17,191,.6)}
+.doc .pages{position:absolute;right:10px;bottom:10px;z-index:2;background:rgba(18,6,46,.88);color:#fff;font-size:.72rem;font-weight:600;padding:5px 10px;border-radius:999px}
+.doc b{display:block;font-family:Montserrat;font-size:.98rem;margin-top:14px}
+.doc span{color:var(--muted);font-size:.82rem}
+@media (max-width:1000px){.profiles{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:620px){.profiles{grid-template-columns:repeat(2,1fr);gap:16px}}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(10,3,26,.92);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:24px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(92vw,900px);max-height:84vh;border-radius:16px;box-shadow:0 40px 80px -20px rgba(0,0,0,.8)}
+.lightbox p{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:var(--muted);font-size:.9rem}
+.lb-btn{position:absolute;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;font-size:1.4rem;cursor:pointer;display:grid;place-items:center}
+.lb-btn:hover{background:var(--brand)}
+.lb-close{top:20px;right:20px}.lb-prev{left:20px;top:50%;transform:translateY(-50%)}.lb-next{right:20px;top:50%;transform:translateY(-50%)}
+@media (max-width:1000px){.gallery{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:620px){.gallery{grid-template-columns:repeat(2,1fr);gap:10px}.lb-prev,.lb-next{top:auto;bottom:60px;transform:none}}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{position:relative;padding:30px 26px;border-radius:var(--radius);border:1px solid var(--line);background:var(--ink-2)}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:Montserrat;font-weight:800;font-size:3rem;line-height:1;display:block;margin-bottom:22px;background:linear-gradient(180deg,rgba(255,111,216,.8),rgba(255,111,216,.08));-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h3{font-size:1.2rem;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.93rem}
+.step:not(:last-child)::after{content:"";position:absolute;top:54px;right:-14px;width:10px;height:10px;border-top:2px solid var(--brand-2);border-right:2px solid var(--brand-2);transform:rotate(45deg);z-index:2}
+
+/* PRICING */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.plan{padding:36px 32px;border-radius:var(--radius);border:1px solid var(--line);background:rgba(255,255,255,.02);display:flex;flex-direction:column}
+.plan.pop{background:linear-gradient(170deg,#3d0f6e,var(--ink-2));border-color:rgba(211,17,191,.6);position:relative;box-shadow:0 30px 60px -30px rgba(211,17,191,.6)}
+.plan.pop .badge{position:absolute;top:-13px;left:32px;background:var(--brand);color:#fff;font-size:.72rem;font-weight:700;padding:5px 12px;border-radius:999px;letter-spacing:.06em}
+.plan h3{font-size:1.2rem}
+.plan .desc{color:var(--muted);font-size:.92rem;margin:6px 0 20px}
+.plan .price{font-family:Montserrat;font-size:2.5rem;font-weight:800;margin-bottom:24px;line-height:1}
+.plan .price small{font-size:.9rem;font-weight:500;color:var(--muted);font-family:Inter}
+.plan ul{list-style:none;display:grid;gap:10px;margin-bottom:30px;font-size:.93rem}
+.plan li{display:flex;gap:10px;align-items:flex-start}
+.plan li svg{flex:none;width:18px;height:18px;color:var(--brand-2);margin-top:3px}
+.plan .btn{margin-top:auto;justify-content:center}
+.plans-note{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-top:22px;padding:22px 28px;border-radius:var(--radius);border:1px dashed rgba(211,17,191,.5);background:rgba(211,17,191,.07)}
+.plans-note b{font-family:Montserrat;font-size:1.05rem}
+.plans-note span{color:var(--muted);font-size:.9rem}
+
+/* FAQ */
+.faq{max-width:820px;margin:0 auto}
+details{border-bottom:1px solid var(--line);padding:22px 0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:Montserrat;font-weight:600;font-size:1.08rem}
+summary::-webkit-details-marker{display:none}
+summary .pm{flex:none;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:transform .3s,background .3s}
+details[open] summary .pm{transform:rotate(45deg);background:var(--brand)}
+details p{color:var(--muted);margin-top:12px;max-width:700px}
+
+/* CTA + CONTACT */
+.cta{position:relative;border-radius:36px;padding:70px 60px;overflow:hidden;background:linear-gradient(120deg,#d311bf 0%,#8e0f9e 45%,#1e0b4b 100%);display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.cta::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.18) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(90deg,#000,transparent 70%);-webkit-mask-image:linear-gradient(90deg,#000,transparent 70%)}
+.cta > *{position:relative}
+.cta h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:18px}
+.cta p{color:rgba(255,255,255,.88);margin-bottom:28px;font-size:1.05rem}
+.contact-list{display:grid;gap:14px}
+.contact-list a,.contact-list > div{display:flex;gap:14px;align-items:center;word-break:break-word}
+.contact-list a:hover .ci{background:rgba(255,255,255,.26)}
+.contact-list .ci{width:44px;height:44px;border-radius:13px;background:rgba(255,255,255,.14);display:grid;place-items:center;flex:none;transition:background .2s}
+.contact-list .ci svg{width:20px;height:20px}
+.contact-list small{display:block;opacity:.7;font-size:.78rem}
+form{background:rgba(18,6,46,.6);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);border-radius:24px;padding:30px;display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:.8rem;color:rgba(255,255,255,.75);display:grid;gap:6px}
+input,select,textarea{width:100%;font:inherit;font-size:.95rem;color:#fff;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px 14px;outline:none;transition:border-color .2s,background .2s}
+input:focus,select:focus,textarea:focus{border-color:var(--brand-2);background:rgba(255,255,255,.11)}
+select option{color:#111}
+textarea{min-height:110px;resize:vertical}
+.form-note{font-size:.82rem;color:rgba(255,255,255,.7)}
+
+/* FOOTER */
+footer{padding:80px 0 40px;border-top:1px solid var(--line);margin-top:110px}
+.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:60px}
+.foot p{color:var(--muted);font-size:.93rem;margin-top:16px;max-width:300px}
+.foot h4{font-size:.95rem;margin-bottom:16px}
+.foot ul{list-style:none;display:grid;gap:10px;color:var(--muted);font-size:.92rem;word-break:break-word}
+.foot a:hover{color:#fff}
+.socials{display:flex;gap:10px;margin-top:22px}
+.socials a{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);display:grid;place-items:center;transition:background .2s}
+.socials a:hover{background:var(--brand)}
+.socials svg{width:18px;height:18px}
+.legal{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:.85rem;padding-top:28px;border-top:1px solid var(--line)}
+
+/* floating whatsapp */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* RESPONSIVE */
+@media (max-width:1000px){
+  .hero-inner,.about-grid,.cta{grid-template-columns:1fr}
+  .hero-card{justify-self:center;max-width:420px;margin-top:20px}
+  .chip-1{left:-10px}.chip-2{right:-6px}
+  .bento .card{grid-column:span 3}
+  .bento .card.feature,.bento .card.supply{grid-column:span 6}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .step::after{display:none}
+  .plans{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr 1fr}
+  .cta{padding:50px 34px}
+}
+@media (max-width:820px){
+  .nav-links,.nav-cta .btn{display:none}
+  .menu-btn{display:grid;place-items:center}
+  .nav-links.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:rgba(18,6,46,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:10px 24px 24px}
+  .nav-links.open a{display:block;padding:14px 0;border-bottom:1px solid var(--line);color:#fff;font-size:1.05rem}
+  .card.supply{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  .wrap{padding:0 16px}
+  section{padding:80px 0}
+  .hero{padding:130px 0 80px}
+  .bento .card,.bento .card.feature{grid-column:span 6}
+  .steps,.why,.values,.row,.foot{grid-template-columns:1fr}
+  .light{margin:0 8px;border-radius:28px}
+  .cta{padding:40px 20px;border-radius:28px}
+  form{padding:20px}
+  .float-chip{display:none}
+  .logo{font-size:1.05rem}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Brandwise Business Solutions home">
+      <img class="logo-img" src="assets/bbs-icon.png" alt="BBS logo">
+      <span>Brandwise<small>Where Innovation Meets Delivery</small></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#pricing">Packages</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary">Get a quote</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="grid-bg"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <div class="pill reveal"><b>ZAMBIAN-OWNED</b> Branding · Marketing · Writing · Supply</div>
+      <h1 class="reveal">Build a brand people <span class="grad">remember</span> and trust.</h1>
+      <p class="lead reveal">BrandWise Business Solutions helps businesses and individuals build a strong, memorable presence online and offline. We do branding, marketing, social media management, web design and professional writing, and we supply the products your business runs on.</p>
+      <div class="hero-actions reveal">
+        <a href="#contact" class="btn btn-primary">Start your project
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#pricing" class="btn btn-ghost">See packages</a>
+      </div>
+      <div class="facts reveal">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Findeco House, Lusaka</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Registered limited company</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Citizen-owned</span>
+      </div>
+    </div>
+
+    <div class="hero-card reveal" aria-hidden="true">
+      <div class="hc-main">
+        <h4>Social media management</h4>
+        <div class="hc-big">12–30 posts<small>custom graphics &amp; copy, every month</small></div>
+        <div class="bars">
+          <i style="height:35%;animation-delay:.1s"></i><i style="height:48%;animation-delay:.2s"></i><i style="height:42%;animation-delay:.3s"></i><i style="height:62%;animation-delay:.4s"></i><i style="height:58%;animation-delay:.5s"></i><i style="height:78%;animation-delay:.6s"></i><i style="height:95%;animation-delay:.7s"></i>
+        </div>
+        <div class="palette">
+          <span style="background:#d311bf"></span><span style="background:#ff6fd8"></span><span style="background:#1e0b4b;border:1px solid rgba(255,255,255,.2)"></span><span style="background:#ffffff"></span>
+        </div>
+      </div>
+      <div class="float-chip chip-1">
+        <div class="ic ic-b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <div><strong>Logo approved</strong><span class="s">Corporate branding</span></div>
+      </div>
+      <div class="float-chip chip-2">
+        <div class="ic ic-c"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
+        <div><strong>Proposal ready</strong><span class="s">Writing services</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <p>What we deliver</p>
+  <div class="track">
+    <span>Corporate Branding</span><span>Social Media</span><span>Web Design</span><span>Billboards &amp; Signage</span><span>Vehicle Branding</span><span>Graphic Design</span><span>CV Writing</span><span>Company Profiles</span><span>Business Proposals</span><span>General Supply</span>
+    <span>Corporate Branding</span><span>Social Media</span><span>Web Design</span><span>Billboards &amp; Signage</span><span>Vehicle Branding</span><span>Graphic Design</span><span>CV Writing</span><span>Company Profiles</span><span>Business Proposals</span><span>General Supply</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <span class="eyebrow">Core services</span>
+        <h2>Everything your business needs to <span class="grad">stand out</span> and grow.</h2>
+      </div>
+      <p>Branding, marketing, writing and supply, all from one Lusaka team that delivers on time.</p>
+    </div>
+
+    <div class="bento">
+      <article class="card feature c-span-4 reveal">
+        <div class="ic ic-w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div>
+        <h3>Branding &amp; Marketing</h3>
+        <p>We create brand identities that last. That means logo design, brand strategy and identity development, plus marketing and advertising campaigns that raise your visibility.</p>
+        <ul><li>Corporate branding</li><li>Logo design</li><li>Brand strategy</li><li>Marketing &amp; advertising</li></ul>
+      </article>
+      <article class="card c-span-2 reveal">
+        <div class="ic ic-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg></div>
+        <h3>Social Media Management</h3>
+        <p>We plan, create and schedule your content, manage your community, and run your ads and analytics.</p>
+      </article>
+      <article class="card c-span-2 reveal">
+        <div class="ic ic-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="12" rx="2"/><path d="M8 21l4-6 4 6"/></svg></div>
+        <h3>Large Format Printing</h3>
+        <p>Billboards, banners, signage, vehicle branding and custom prints.</p>
+      </article>
+      <article class="card c-span-2 reveal">
+        <div class="ic ic-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></svg></div>
+        <h3>Graphic Design</h3>
+        <p>High-quality visuals for businesses, events and marketing campaigns.</p>
+      </article>
+      <article class="card c-span-2 reveal">
+        <div class="ic ic-d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></div>
+        <h3>Personal Branding</h3>
+        <p>We position individuals as thought leaders in their industry.</p>
+      </article>
+      <article class="card c-span-3 reveal">
+        <div class="ic ic-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="m9 8-2 2 2 2M15 8l2 2-2 2"/></svg></div>
+        <h3>Web Design</h3>
+        <p>Modern, mobile-friendly websites that put your brand online and turn visitors into enquiries, with WhatsApp and contact forms built in.</p>
+        <ul><li>Business websites</li><li>Landing pages</li><li>Portfolio sites</li><li>Website content</li><li>Updates &amp; maintenance</li></ul>
+      </article>
+      <article class="card c-span-3 reveal">
+        <div class="ic ic-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+        <h3>Writing &amp; Content Creation</h3>
+        <p>Our writers produce clear, persuasive content that gets results, from CVs that land interviews to proposals that win funding and partnerships.</p>
+        <ul><li>CV writing</li><li>Cover letters</li><li>Company profiles</li><li>Business proposals</li><li>Blog &amp; website content</li><li>Marketing &amp; sales copywriting</li></ul>
+      </article>
+      <article class="card supply c-span-6 reveal">
+        <div>
+          <div class="ic ic-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg></div>
+          <h3>General Supply Division</h3>
+          <p>We are a registered general supplier, sourcing essential products for businesses and institutions across many industries.</p>
+        </div>
+        <ul>
+          <li>Office equipment &amp; stationery</li><li>Industrial &amp; construction supplies</li><li>Medical equipment &amp; supplies</li><li>IT &amp; electronics</li><li>Security &amp; cleaning supplies</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="why">
+      <div class="reveal"><i>✦</i><b>Clients first</b><span>Your success is our priority.</span></div>
+      <div class="reveal"><i>✦</i><b>Excellence</b><span>High-quality branding, content and supply.</span></div>
+      <div class="reveal"><i>✦</i><b>Creative &amp; innovative</b><span>Solutions that make you stand out.</span></div>
+      <div class="reveal"><i>✦</i><b>Reliable</b><span>Timely delivery, every time.</span></div>
+      <div class="reveal"><i>✦</i><b>Results-oriented</b><span>Helping you achieve real business growth.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Social media designs</span><h2>Work that gets <span class="grad">noticed</span>.</h2></div>
+      <p>A selection of flyers and campaign content we've made for our clients and for our own brand. Click any design to see it full size.</p>
+    </div>
+    <div class="filters reveal" role="tablist" aria-label="Filter designs">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="reco">Reco Refrigeration</button>
+      <button class="chip" data-filter="beta">Beta Feeds</button>
+      <button class="chip" data-filter="bbs">BrandWise campaigns</button>
+      <button class="chip" data-filter="more">More clients</button>
+    </div>
+    <div class="gallery" id="gallery">
+      <figure class="shot" data-cat="reco" tabindex="0"><img loading="lazy" src="assets/work/reco-4.jpg" alt="Reco Refrigeration: Cooling you can trust"><figcaption>Reco Refrigeration</figcaption></figure>
+      <figure class="shot" data-cat="beta" tabindex="0"><img loading="lazy" src="assets/work/beta-1.jpg" alt="Beta Feeds: When feeding is right, growth follows"><figcaption>Beta Feeds</figcaption></figure>
+      <figure class="shot" data-cat="bbs" tabindex="0"><img loading="lazy" src="assets/work/bbs-1.jpg" alt="BrandWise BEHOLD campaign: You don't need the room. The room needs you."><figcaption>BrandWise · BEHOLD campaign</figcaption></figure>
+      <figure class="shot" data-cat="reco" tabindex="0"><img loading="lazy" src="assets/work/reco-5.jpg" alt="Reco Refrigeration: One name to keep it cold"><figcaption>Reco Refrigeration</figcaption></figure>
+      <figure class="shot" data-cat="beta" tabindex="0"><img loading="lazy" src="assets/work/beta-4.jpg" alt="Beta Feeds: Let's get ready for the week"><figcaption>Beta Feeds</figcaption></figure>
+      <figure class="shot" data-cat="more" tabindex="0"><img loading="lazy" src="assets/work/nails-2.jpg" alt="Gacious Nails: Happy New Week"><figcaption>Gacious Nails</figcaption></figure>
+      <figure class="shot" data-cat="reco" tabindex="0"><img loading="lazy" src="assets/work/reco-1.jpg" alt="Reco Refrigeration: Customers buy with their eyes first"><figcaption>Reco Refrigeration</figcaption></figure>
+      <figure class="shot" data-cat="beta" tabindex="0"><img loading="lazy" src="assets/work/beta-7.jpg" alt="Beta Feeds: The king of the finishing stage"><figcaption>Beta Feeds</figcaption></figure>
+      <figure class="shot" data-cat="bbs" tabindex="0"><img loading="lazy" src="assets/work/bbs-2.jpg" alt="BrandWise #DesignedForAttention: Presence wins"><figcaption>BrandWise · #DesignedForAttention</figcaption></figure>
+      <figure class="shot" data-cat="reco" tabindex="0"><img loading="lazy" src="assets/work/reco-7.jpg" alt="Reco Refrigeration: Give your products the spotlight"><figcaption>Reco Refrigeration</figcaption></figure>
+      <figure class="shot" data-cat="more" tabindex="0"><img loading="lazy" src="assets/work/church-1.jpg" alt="Church Growth Forum event flyer"><figcaption>Church Growth Forum</figcaption></figure>
+      <figure class="shot" data-cat="beta" tabindex="0"><img loading="lazy" src="assets/work/beta-3.jpg" alt="Beta Feeds: Happy New Week"><figcaption>Beta Feeds</figcaption></figure>
+      <figure class="shot" data-cat="reco" tabindex="0"><img loading="lazy" src="assets/work/reco-3.jpg" alt="Reco Refrigeration: Keep your cargo cold"><figcaption>Reco Refrigeration</figcaption></figure>
+      <figure class="shot" data-cat="bbs" tabindex="0"><img loading="lazy" src="assets/work/bbs-4.jpg" alt="BrandWise BEHOLD campaign: This isn't confidence. It's certainty."><figcaption>BrandWise · BEHOLD campaign</figcaption></figure>
+      <figure class="shot" data-cat="beta" tabindex="0"><img loading="lazy" src="assets/work/beta-8.jpg" alt="Beta Feeds: Start your week like a professional"><figcaption>Beta Feeds</figcaption></figure>
+      <figure class="shot" data-cat="more" tabindex="0"><img loading="lazy" src="assets/work/nuka-1.jpg" alt="Nuka Enterprise logo mockup"><figcaption>Nuka Enterprise · Logo design</figcaption></figure>
+      <figure class="shot" data-cat="reco" tabindex="0"><img loading="lazy" src="assets/work/reco-8.jpg" alt="Reco Refrigeration: Built to carry the load"><figcaption>Reco Refrigeration</figcaption></figure>
+      <figure class="shot" data-cat="beta" tabindex="0"><img loading="lazy" src="assets/work/beta-2.jpg" alt="Beta Feeds: From first lay to peak production"><figcaption>Beta Feeds</figcaption></figure>
+      <figure class="shot" data-cat="more" tabindex="0"><img loading="lazy" src="assets/work/tie-1.jpg" alt="Dress The Part premium neck ties advert"><figcaption>Dress The Part</figcaption></figure>
+      <figure class="shot" data-cat="reco" tabindex="0"><img loading="lazy" src="assets/work/reco-2.jpg" alt="Reco Refrigeration: Open all day, sealed all day"><figcaption>Reco Refrigeration</figcaption></figure>
+      <figure class="shot" data-cat="bbs" tabindex="0"><img loading="lazy" src="assets/work/bbs-3.jpg" alt="BrandWise CV campaign: Qualified. Overlooked."><figcaption>BrandWise · CV writing campaign</figcaption></figure>
+      <figure class="shot" data-cat="beta" tabindex="0"><img loading="lazy" src="assets/work/beta-6.jpg" alt="Beta Feeds: From our mill to your farm"><figcaption>Beta Feeds</figcaption></figure>
+      <figure class="shot" data-cat="more" tabindex="0"><img loading="lazy" src="assets/work/nails-1.jpg" alt="Gacious Nails: Reasons to book a nail appointment"><figcaption>Gacious Nails</figcaption></figure>
+      <figure class="shot" data-cat="bbs" tabindex="0"><img loading="lazy" src="assets/work/bbs-5.jpg" alt="BrandWise #DesignedForAttention: Dominate attention"><figcaption>BrandWise · #DesignedForAttention</figcaption></figure>
+      <figure class="shot" data-cat="bbs" tabindex="0"><img loading="lazy" src="assets/work/bbs-6.jpg" alt="BrandWise BEHOLD campaign: Attention isn't given. It's taken."><figcaption>BrandWise · BEHOLD campaign</figcaption></figure>
+      <figure class="shot" data-cat="reco" tabindex="0"><img loading="lazy" src="assets/work/reco-6.jpg" alt="Reco Refrigeration: Where cold is born"><figcaption>Reco Refrigeration</figcaption></figure>
+      <figure class="shot" data-cat="beta" tabindex="0"><img loading="lazy" src="assets/work/beta-5.jpg" alt="Beta Feeds: Built for strong growth"><figcaption>Beta Feeds</figcaption></figure>
+      <figure class="shot" data-cat="more" tabindex="0"><img loading="lazy" src="assets/work/mamekelo-1.jpg" alt="Mamekelo company profile cover"><figcaption>Mamekelo · Company profile</figcaption></figure>
+      <figure class="shot" data-cat="bbs" tabindex="0"><img loading="lazy" src="assets/work/bbs-7.jpg" alt="BrandWise #DesignedForAttention: Position beyond competition"><figcaption>BrandWise · #DesignedForAttention</figcaption></figure>
+      <figure class="shot" data-cat="bbs" tabindex="0"><img loading="lazy" src="assets/work/bbs-8.jpg" alt="BrandWise BEHOLD campaign: Not loud. Just impossible to ignore."><figcaption>BrandWise · BEHOLD campaign</figcaption></figure>
+      <figure class="shot" data-cat="more" tabindex="0"><img loading="lazy" src="assets/work/reflections-1.jpg" alt="Reflections logo design"><figcaption>Reflections · Logo design</figcaption></figure>
+    </div>
+
+    <div class="sub-head reveal">
+      <div><span class="eyebrow">Company profiles</span><h3>Profiles that open doors.</h3></div>
+      <p>We write and design company profiles that build credibility with clients, partners and tender committees. Click a cover to flip through sample pages.</p>
+    </div>
+    <div class="profiles">
+      <button class="doc reveal" data-pages="mamekelo" data-name="Mamekelo"><div class="cover"><img loading="lazy" src="assets/profiles/mamekelo-1.jpg" alt="Mamekelo business profile cover"><span class="pages">3 pages</span></div><b>Mamekelo</b><span>Construction</span></button>
+      <button class="doc reveal" data-pages="ksm" data-name="KSM Management Consultants"><div class="cover"><img loading="lazy" src="assets/profiles/ksm-1.jpg" alt="KSM company profile cover"><span class="pages">3 pages</span></div><b>KSM Management Consultants</b><span>HR &amp; consulting</span></button>
+      <button class="doc reveal" data-pages="beleka" data-name="Beleka Corporate Solutions"><div class="cover"><img loading="lazy" src="assets/profiles/beleka-1.jpg" alt="Beleka Corporate Solutions business profile cover"><span class="pages">3 pages</span></div><b>Beleka Corporate Solutions</b><span>Business consulting</span></button>
+      <button class="doc reveal" data-pages="veloce" data-name="Veloce Enterprises"><div class="cover"><img loading="lazy" src="assets/profiles/veloce-1.jpg" alt="Veloce Enterprises business profile cover"><span class="pages">3 pages</span></div><b>Veloce Enterprises</b><span>Commercial &amp; industrial supply</span></button>
+      <button class="doc reveal" data-pages="lutakan" data-name="Lutakan Investments"><div class="cover"><img loading="lazy" src="assets/profiles/lutakan-1.jpg" alt="Lutakan business profile cover"><span class="pages">3 pages</span></div><b>Lutakan Investments</b><span>Multi-sector solutions</span></button>
+      <button class="doc reveal" data-pages="kgd" data-name="Kadabaya General Dealers"><div class="cover"><img loading="lazy" src="assets/profiles/kgd-1.jpg" alt="Kadabaya General Dealers business profile cover"><span class="pages">3 pages</span></div><b>Kadabaya General Dealers</b><span>Safety wear &amp; supplies</span></button>
+      <button class="doc reveal" data-pages="mulamart" data-name="Mulamart"><div class="cover"><img loading="lazy" src="assets/profiles/mulamart-1.jpg" alt="Mulamart business profile cover"><span class="pages">3 pages</span></div><b>Mulamart</b><span>HVAC &amp; civil engineering</span></button>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Design preview">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <img id="lbImg" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next">›</button>
+  <p id="lbCap"></p>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="light">
+  <div class="wrap about-grid">
+    <div class="about-visual reveal">
+      <div class="ring r1"></div><div class="ring r2"></div>
+      <img class="about-logo" src="assets/bbs-icon.png" alt="">
+      <small>Our vision</small>
+      <blockquote>“To be the most trusted and innovative branding and business solutions partner, helping individuals and businesses create powerful, lasting impressions in the marketplace.”</blockquote>
+    </div>
+    <div class="about-text reveal">
+      <span class="eyebrow">Who we are</span>
+      <h2>Where innovation meets delivery.</h2>
+      <p class="muted">BrandWise Business Solutions Limited is a Zambian-owned company. We help businesses and individuals through branding, marketing, social media management and writing services, so they can build a strong, memorable presence online and offline.</p>
+      <p class="muted">Beyond branding, our General Supply Division makes sure businesses can get the essential products they need across a range of industries.</p>
+      <div class="mission">
+        <b>Our mission</b>
+        <p>To deliver high-quality branding, marketing and writing services that raise our clients' visibility, credibility and success. We use creative storytelling, strategic branding and professional writing to help businesses and individuals stand out, grow and thrive.</p>
+      </div>
+      <div class="values">
+        <div class="value"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><div><h4>Client-centric</h4><p>We listen, understand and tailor our services to you.</p></div></div>
+        <div class="value"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div><div><h4>Excellence &amp; quality</h4><p>Crafted with precision and professionalism.</p></div></div>
+        <div class="value"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></div><div><h4>Innovation &amp; creativity</h4><p>Ideas that set our clients apart.</p></div></div>
+        <div class="value"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>Integrity &amp; trust</h4><p>Honest, transparent and ethical.</p></div></div>
+        <div class="value"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><div><h4>Results-driven</h4><p>Measurable success and real growth.</p></div></div>
+        <div class="value"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><h4>Reliability &amp; commitment</h4><p>Delivering on time, every time.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">How we work</span><h2>A simple process with <span class="grad">brilliant</span> results.</h2></div>
+      <p>No jargon and no surprises. You'll always know what's happening and what comes next.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Discover</h3><p>We get to know your business, your customers and your goals.</p></div>
+      <div class="step reveal"><h3>Plan</h3><p>We agree on a clear scope, timeline and quote that fit your budget.</p></div>
+      <div class="step reveal"><h3>Create</h3><p>We design, write and build, and share drafts so you can give feedback early.</p></div>
+      <div class="step reveal"><h3>Deliver &amp; grow</h3><p>We launch on time, report on results and keep supporting you as you grow.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Social media packages</span><h2>Business &amp; corporate pages, <span class="grad">handled</span>.</h2></div>
+      <p>Monthly packages for businesses that want a consistent, professional presence on social media.</p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>1 Platform</h3><p class="desc">A strong, steady presence on your main channel.</p>
+        <div class="price">K4,500<small> /month</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>12 posts per month (3 per week)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Custom graphics and captions</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Monthly performance report</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>2 holiday posts</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Basic engagement</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Content calendar</li>
+        </ul>
+        <a href="#contact" data-service="Social Media – 1 Platform (K4,500)" class="btn btn-ghost pick">Choose 1 Platform</a>
+      </div>
+      <div class="plan pop reveal">
+        <span class="badge">MOST POPULAR</span>
+        <h3>2 Platforms</h3><p class="desc">Growth-focused management with strategy and paid ads.</p>
+        <div class="price">K7,500<small> /month</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>16–20 posts per month</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Custom graphics and copywriting</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Monthly performance report</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Holiday posts &amp; community management</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Content calendar &amp; competitor analysis</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Social listening and monitoring</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Growth recommendations &amp; campaign strategy</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Paid ads management</li>
+        </ul>
+        <a href="#contact" data-service="Social Media – 2 Platforms (K7,500)" class="btn btn-primary pick">Choose 2 Platforms</a>
+      </div>
+      <div class="plan reveal">
+        <h3>Multiple Platforms</h3><p class="desc">Full-service management across all your channels.</p>
+        <div class="price">K10,000<small> /month</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>24–30 posts per month</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Everything in 2 Platforms</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Influencer &amp; partnership coordination</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Brand reputation management</li>
+        </ul>
+        <a href="#contact" data-service="Social Media – Multiple Platforms (K10,000)" class="btn btn-ghost pick">Choose Multiple</a>
+      </div>
+    </div>
+    <div class="plans-note reveal">
+      <div><b>Personal Branding Package: K1,000</b><br><span>For professionals who want to stand out online.</span></div>
+      <span>All social media packages run on a contract, with a minimum commitment of 3 months.</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal" style="justify-content:center;text-align:center">
+      <div style="margin:0 auto"><span class="eyebrow">FAQ</span><h2>Questions, answered.</h2></div>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Is there a minimum contract for social media management?<span class="pm">+</span></summary><p>Yes. All our social media packages run on a contract with a minimum commitment of 3 months. That gives your content enough time to build momentum and show results.</p></details>
+      <details><summary>Do you work with individuals as well as businesses?<span class="pm">+</span></summary><p>Yes. We offer personal branding for professionals, plus CV writing, cover letters and other documents for job seekers.</p></details>
+      <details><summary>Can you handle printing as well as design?<span class="pm">+</span></summary><p>Yes. We do large format printing, including billboards, banners, signage, vehicle branding and custom prints, from design through to the finished product.</p></details>
+      <details><summary>What does your General Supply Division provide?<span class="pm">+</span></summary><p>We are a registered general supplier of office equipment and stationery, industrial and construction supplies, medical equipment, IT and electronics, and security and cleaning supplies. Contact us with your requirements for a quotation.</p></details>
+      <details><summary>Where are you located?<span class="pm">+</span></summary><p>Our head office is in Room 4, 4th Floor, Findeco House, Cairo Road, Lusaka, Zambia. We work with clients across Zambia.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section id="contact" style="padding-top:0;padding-bottom:0">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div>
+        <h2>Let's build something remarkable together.</h2>
+        <p>Tell us about your project and we'll get back to you with ideas and a quote.</p>
+        <div class="contact-list">
+          <a href="tel:+260979192773"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><small>Call / WhatsApp</small>+260 979 192 773</div></a>
+          <a href="mailto:brandwisebuisnesssolutions@gmail.com"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><div><small>Email</small>brandwisebuisnesssolutions@gmail.com</div></a>
+          <div><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><small>Head office</small>Room 4, 4th Floor, Findeco House, Cairo Road, Lusaka</div></div>
+        </div>
+      </div>
+      <form id="contactForm">
+        <div class="row">
+          <label>Full name<input required name="name" placeholder="Your name"></label>
+          <label>Phone<input name="phone" placeholder="+260 …"></label>
+        </div>
+        <label>Service needed
+          <select name="service" id="serviceSelect">
+            <option>Branding &amp; Marketing</option>
+            <option>Social Media – 1 Platform (K4,500)</option>
+            <option>Social Media – 2 Platforms (K7,500)</option>
+            <option>Social Media – Multiple Platforms (K10,000)</option>
+            <option>Personal Branding (K1,000)</option>
+            <option>Large Format Printing</option>
+            <option>Graphic Design</option>
+            <option>Web Design</option>
+            <option>Writing &amp; Content Creation</option>
+            <option>General Supply</option>
+            <option>Not sure yet</option>
+          </select></label>
+        <label>Tell us about your project<textarea required name="message" placeholder="A few lines about your business and what you need…"></textarea></label>
+        <button class="btn btn-primary" type="submit" style="justify-content:center">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+          Send via WhatsApp</button>
+        <div class="form-note">Opens WhatsApp with your message ready to send to our team.</div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#" class="logo"><img class="logo-img" src="assets/bbs-icon.png" alt="BBS logo"><span>Brandwise<small>Where Innovation Meets Delivery</small></span></a>
+        <p>BrandWise Business Solutions Limited. Branding, marketing, writing and general supply from Lusaka, Zambia.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook: Brandwise Business Solutions"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6c0-.9.6-1 1-1h3V1h-4c-4 0-5 3-5 5v2H6v4h3v11h5V12h3.5l.5-4z"/></svg></a>
+          <a href="#" aria-label="LinkedIn: Brandwise Business Solutions"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg></a>
+          <a href="https://wa.me/260979192773" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Services</h4><ul><li><a href="#services">Branding &amp; Marketing</a></li><li><a href="#pricing">Social Media</a></li><li><a href="#services">Printing &amp; Design</a></li><li><a href="#services">Web Design</a></li><li><a href="#services">Writing</a></li><li><a href="#services">General Supply</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#about">About us</a></li><li><a href="#pricing">Packages</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a href="tel:+260979192773">+260 979 192 773</a></li><li><a href="mailto:brandwisebuisnesssolutions@gmail.com">brandwisebuisnesssolutions@gmail.com</a></li><li>Room 4, 4th Floor, Findeco House, Cairo Road, Lusaka</li></ul></div>
+    </div>
+    <div class="legal"><span>© <span id="yr"></span> BrandWise Business Solutions Limited. All rights reserved.</span><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/260979192773" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+</a>
+
+<script>
+const WHATSAPP = '260979192773';
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// sticky header
+const header = document.getElementById('top');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+// mobile menu
+const menuBtn = document.getElementById('menuBtn'), navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open);
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false);
+}));
+
+// package buttons preselect the service in the form
+const sel = document.getElementById('serviceSelect');
+document.querySelectorAll('.pick').forEach(b => b.addEventListener('click', () => { sel.value = b.dataset.service; }));
+
+// portfolio filters + lightbox
+const shots = [...document.querySelectorAll('.shot')];
+document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
+  document.querySelectorAll('.chip').forEach(x => x.classList.toggle('active', x === c));
+  shots.forEach(s => s.classList.toggle('hide', c.dataset.filter !== 'all' && s.dataset.cat !== c.dataset.filter));
+}));
+const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap');
+let cur = 0, items = [];
+const show = i => { cur = (i + items.length) % items.length; const it = items[cur]; lbImg.src = it.src; lbImg.alt = it.alt; lbCap.textContent = it.cap; };
+const openLb = (list, i) => { items = list; show(i); lb.classList.add('open'); document.body.style.overflow = 'hidden'; };
+const closeLb = () => { lb.classList.remove('open'); document.body.style.overflow = ''; };
+const shotItems = () => shots.filter(s => !s.classList.contains('hide')).map(s => ({ el: s, src: s.querySelector('img').src, alt: s.querySelector('img').alt, cap: s.querySelector('figcaption').textContent }));
+const openShot = s => { const list = shotItems(); openLb(list, list.findIndex(x => x.el === s)); };
+shots.forEach(s => { s.addEventListener('click', () => openShot(s)); s.addEventListener('keydown', e => { if (e.key === 'Enter') openShot(s); }); });
+// company profiles: flip through each profile's pages
+document.querySelectorAll('.doc').forEach(d => d.addEventListener('click', () => {
+  const k = d.dataset.pages, name = d.dataset.name;
+  openLb([1, 2, 3].map(n => ({ src: `assets/profiles/${k}-${n}.jpg`, alt: `${name} company profile, page ${n}`, cap: `${name} · Company profile · ${n} / 3` })), 0);
+}));
+document.getElementById('lbClose').onclick = closeLb;
+document.getElementById('lbPrev').onclick = () => show(cur - 1);
+document.getElementById('lbNext').onclick = () => show(cur + 1);
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', e => { if (!lb.classList.contains('open')) return; if (e.key === 'Escape') closeLb(); if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
+
+// reveal on scroll
+const io = new IntersectionObserver(entries => entries.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add('in');
+  io.unobserve(e.target);
+}), {threshold:.12});
+document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
+
+// contact form -> WhatsApp
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const msg = `Hello BrandWise! My name is ${f.get('name')}.` +
+    (f.get('phone') ? `\nPhone: ${f.get('phone')}` : '') +
+    `\nService: ${f.get('service')}\n\n${f.get('message')}`;
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+});
+</script>
+</body>
+</html>
